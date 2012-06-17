@@ -1,19 +1,26 @@
+dofile("backgrounds/world_1_1_map.lua")
+dofile("backgrounds/world_1_2_map.lua")
+
 world1_1 = {
 	layer1 = love.graphics.newImage("backgrounds/world_1_1.png"),
+	layer1_info = world_1_1_map,
+	transparent = 1,
 	playerx = 100,
-	playery = 200,
+	playery = 150,
 	camerax = 0,
 	cameray = 0,
-	groundy = 200
+	tilewidth = 424,
 }
 
 world1_2 = {
 	layer1 = love.graphics.newImage("backgrounds/world_1_2.png"),
+	layer1_info = world_1_2_map,
+	transparent = 0,
 	playerx = 200,
-	playery = 400,
+	playery = 380,
 	camerax = 0,
 	cameray = 0,
-	groundy = 400
+	tilewidth = 425
 }
 
 function loadMap(map)

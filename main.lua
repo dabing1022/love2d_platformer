@@ -26,6 +26,6 @@ function love.update(dt)
 end
 
 function love.draw()
-	love.graphics.draw(player.map.layer1, -camera.x, 0)
+	love.graphics.draw(player.map.layer1, math.floor(-camera.x), 0)
 	player:drawAnimation()	
 end
