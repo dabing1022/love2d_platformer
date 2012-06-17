@@ -1,4 +1,5 @@
 dofile("physics.lua")
+dofile("camera.lua")
 dofile("animations.lua")
 dofile("player.lua")
 
@@ -18,9 +19,10 @@ function love.update(dt)
 	player:doLogic()
 	player:doPhysics()
 	player:doAnimation()
+	cameraUpdate()
 end
 
 function love.draw()
-	love.graphics.draw(bgGfx, 0, 0)
+	love.graphics.draw(bgGfx, -camera.x, 0)
 	player:drawAnimation()	
 end

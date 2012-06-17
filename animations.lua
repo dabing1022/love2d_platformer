@@ -59,6 +59,8 @@ end
 
 function drawAnimation(this)
 	quad = love.graphics.newQuad(this.animation.x + this.frame * this.animation.widthJump, this.animation.y, this.animation.width, this.animation.height, 405, 188)
-	if this.direction == "right" or not this.direction then love.graphics.drawq(this.gfx, quad, this.x, this.y, 0) end
-	if this.direction == "left" then love.graphics.drawq(this.gfx, quad, this.x + this.animation.width, this.y, 0, -1, 1) end
+	x, y = getPosition(this)
+	
+	if this.direction == "right" or not this.direction then love.graphics.drawq(this.gfx, quad, x, y, 0) end
+	if this.direction == "left" then love.graphics.drawq(this.gfx, quad, x + this.animation.width, y, 0, -1, 1) end
 end
