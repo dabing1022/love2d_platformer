@@ -1,5 +1,4 @@
 gravity = 0.12
-groundY = 200
 
 function defaultPhysics(this)
 	if not this.xacc then this.xacc = 0 end

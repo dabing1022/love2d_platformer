@@ -1,7 +1,4 @@
 player = {
-	x = 100,
-	y = groundY,
-	
 	xspeedMax = 2,
 	xspeedMin = -2,
 	
@@ -28,8 +25,8 @@ function player:doLogic()
 		setAnimation(player, idle)
 	end
 	
-	if player.y > groundY - player.animation.height then
-		player.y = groundY - player.animation.height
+	if player.y > player.map.groundy - player.animation.height then
+		player.y = player.map.groundy - player.animation.height
 		player.jumping = false
 		player.yspeed = 0
 	end
